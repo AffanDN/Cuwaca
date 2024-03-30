@@ -19,7 +19,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="4dp"
         android:gravity="center_horizontal"
-        android:text="Hello, Affan"
+        android:text="Hello People"
         android:textStyle="bold"
         android:textColor="@color/primary"
         app:layout_constraintEnd_toEndOf="parent"
