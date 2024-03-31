@@ -5,36 +5,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:gravity="center"
-        android:background="@drawable/rounded_bg"
-        android:padding="10dp">
-        <ImageButton
-            android:id="@+id/ibLogoButton"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:src="@drawable/ic_detailweather"
-            android:background="@drawable/rounded_bg">
-        </ImageButton>
-        <TextView
+        <Button
+            android:id="@+id/btnButtonDetail"
             android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Detail"
-            android:layout_marginRight="10dp"
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="@color/white"
-            app:layout_constraintStart_toEndOf="@id/ibLogoButton"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
-    </LinearLayout>
+
 
 
 

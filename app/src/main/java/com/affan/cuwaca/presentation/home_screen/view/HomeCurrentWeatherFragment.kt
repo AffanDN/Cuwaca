@@ -1,5 +1,6 @@
 package com.affan.cuwaca.presentation.home_screen.view
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
@@ -9,6 +10,7 @@ import com.affan.cuwaca.base.BaseFragment
 import com.affan.cuwaca.data.model.CurrentWeatherResponse
 import com.affan.cuwaca.data.model.ForecastDataHourly
 import com.affan.cuwaca.databinding.FragmentDashboardBinding
+import com.affan.cuwaca.presentation.detail_screen.view.DetailCurrentWeatherFragment
 import com.affan.cuwaca.presentation.home_screen.adapter.HourlyWeatherAdapter
 import com.affan.cuwaca.presentation.home_screen.viewmodel.HomeViewModel
 import com.affan.cuwaca.presentation.home_screen.viewmodel.HourlyWeatherViewModel
@@ -32,6 +34,7 @@ class HomeCurrentWeatherFragment : BaseFragment<FragmentDashboardBinding>() {
     }
 
     override fun setupView() {
+        handleClick()
         viewHomeCurrentWeatherModel.getHomeCuwaca()
         viewHomeHourlyWeatherModel.getHomeHourlyCuwaca()
         observeViewModel()
@@ -74,6 +77,16 @@ class HomeCurrentWeatherFragment : BaseFragment<FragmentDashboardBinding>() {
             binding.root.context, LinearLayoutManager.HORIZONTAL, false
         )
 
+    }
+    private fun handleClick() {
+        binding.iButtonDetail.btnButtonDetail.setOnClickListener {
+            val newFragment = DetailCurrentWeatherFragment()
+            // Lakukan transaksi fragment untuk menggantikan fragment saat ini dengan fragment baru
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainer, newFragment)
+                .addToBackStack(null) // Tambahkan ke back stack agar dapat kembali ke fragment sebelumnya
+                .commit()
+        }
     }
 
 }
