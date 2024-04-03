@@ -1,5 +1,5 @@
 ### Project Android : Cuwaca
-<h1 align="center">Project Android : Cuwaca</h1>
+<h1 align="center">CUWACA</h1>
 
 ## Tech Stack & Open-source Libraries
 
